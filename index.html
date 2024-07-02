@@ -1,1 +1,49 @@
-<h1>lkadlasdklas</h1>
+
+<style>
+
+    #adContainer{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .box{
+        width: 100px;
+        height: 100px;
+        border:1px solid green;
+    }
+
+</style>
+
+<div id="adContainer">
+
+</div>
+
+<script>
+
+let products = [
+    {name:"VIVO 22"},
+    {name:"GP 450"},
+    {name:"LENOVO Y6"},
+    {name:"Honda 125"}
+];
+
+let count = 0;
+
+for(let product of products){
+
+    count++;
+
+    let adBox =  document.createElement('div');
+    adBox.className = 'box box'+count;
+    adBox.innerText = product.name;
+
+    adBox.onclick = function() {
+        alert(product);
+        // adBox.remove();
+    }
+
+    adContainer.appendChild(adBox);
+
+}
+
+</script>
